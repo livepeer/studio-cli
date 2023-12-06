@@ -1,6 +1,6 @@
 {
-  "name": "@livepeer-app",
-  "version": "0.0.1",
+  "name": "@livepeer/create",
+  "version": "0.0.2",
   "description": "Generate a new Livepeer App",
   "bin": "cli.js",
   "type": "module",

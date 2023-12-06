@@ -88,7 +88,7 @@ NEXT_PUBLIC_PLAYBACK_ID=""
     if (withEnv === 'yes') {
       log('Get Livepeer API Key at https://livepeer.studio/dashboard')
       const livepeer_api_key = await input({ message: "LivePeer API Key" })
-      log('Create Stream and get Playback ID at https://livepeer.studio/dashboard/streams')
+      log('Create stream and get Playback ID at https://livepeer.studio/dashboard/streams')
       const playback_id = await input({ message: "Playback ID" })
 
       envs = `
