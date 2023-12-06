@@ -86,9 +86,9 @@ NEXT_PUBLIC_PLAYBACK_ID=""
     })
 
     if (withEnv === 'yes') {
-      console.log('Get Livepeer API Key at https://livepeer.studio/dashboard')
+      log('Get Livepeer API Key at https://livepeer.studio/dashboard')
       const livepeer_api_key = await input({ message: "LivePeer API Key" })
-      console.log('Create Stream and get Playback ID at https://livepeer.studio/dashboard/streams')
+      log('Create Stream and get Playback ID at https://livepeer.studio/dashboard/streams')
       const playback_id = await input({ message: "Playback ID" })
 
       envs = `
@@ -123,7 +123,7 @@ NEXT_PUBLIC_PLAYBACK_ID="${playback_id}"
       await execaCommand('bun install').pipeStdout(process.stdout)
       spinner.text = ''
       startCommand = 'bun dev'
-      console.log('\n')
+      log('\n')
     } else if (isYarnInstalled()) {
       await execaCommand('yarn').pipeStdout(process.stdout)
       startCommand = 'yarn dev'
