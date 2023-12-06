@@ -1,4 +1,4 @@
-## Livepeer App CLI
+## Livepeer Studio CLI
 
 ### Usage
 
