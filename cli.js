@@ -67,6 +67,8 @@ async function main() {
     let  envs = `
     # Livepeer API Key
 LIVEPEER_API_KEY=""
+
+NEXT_PUBLIC_PLAYBACK_ID=""
 `
     
     const withEnv = await select({
@@ -86,10 +88,15 @@ LIVEPEER_API_KEY=""
     if (withEnv === 'yes') {
       console.log('Get Livepeer API Key at https://livepeer.studio/dashboard')
       const livepeer_api_key = await input({ message: "LivePeer API Key" })
+      console.log('Create Stream and get Playback ID at https://livepeer.studio/dashboard/streams')
+      const playback_id = await input({ message: "Playback ID" })
 
       envs = `
 # Livepeer API Key
-LIVEPEER_API_KEY="${livepeer_api_key}"     
+LIVEPEER_API_KEY="${livepeer_api_key}"
+
+# Livepeer Playback ID
+NEXT_PUBLIC_PLAYBACK_ID="${playback_id}"
 `
     }
   
